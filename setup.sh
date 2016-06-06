@@ -286,8 +286,11 @@ git clone https://github.com/tensorflow/magenta.git
 
 cd /home/ubuntu/workspace/magenta/magenta
 
-bazel test
+#bazel test
 
+
+bazel build //magenta:midi_io_test
+#bazel build //magenta:midi_io
 
 # build your script (lots of midi files in a folder)
 #bazel build magenta:convert_midi_dir_to_note_sequences
