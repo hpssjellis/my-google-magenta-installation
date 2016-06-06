@@ -40,19 +40,36 @@ echo "Now trying Bazel"
 
 #https://github.com/bazelbuild/bazel/releases/download/0.1.2/bazel-0.1.2-jdk7-installer-linux-x86_64.sh
 
+#mkdir /home/ubuntu/workspace/bazel
+
+#wget https://github.com/bazelbuild/bazel/releases/download/0.1.2/bazel-0.1.2-jdk7-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+
+#cd /home/ubuntu/workspace/bazel
+
+#chmod a+x bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+#bash bazel-0.1.2-jdk7-installer-linux-x86_64.sh --bin=/home/ubuntu/workspace/bazel/bin --base=/home/ubuntu/workspace/bazel/.bazel --bazelrc=/home/ubuntu/workspace/bazel/.bazelrc
+
+#rm bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+
+#cd /home/ubuntu/workspace/bazel/.bazel/bin
+#chmod a+x bazel
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer pkg-config zip g++ zlib1g-dev unzip
+
 mkdir /home/ubuntu/workspace/bazel
 
-wget https://github.com/bazelbuild/bazel/releases/download/0.1.2/bazel-0.1.2-jdk7-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.2.3-installer-linux-x86_64.sh
+chmod +x bazel-0.2.3-installer-linux-x86_64.sh
+./bazel-0.2.3-installer-linux-x86_64.sh --user
+export PATH="$PATH:/home/ubuntu/bin"
+rm bazel-0.2.3-installer-linux-x86_64.sh
 
-cd /home/ubuntu/workspace/bazel
 
-chmod a+x bazel-0.1.2-jdk7-installer-linux-x86_64.sh
-bash bazel-0.1.2-jdk7-installer-linux-x86_64.sh --bin=/home/ubuntu/workspace/bazel/bin --base=/home/ubuntu/workspace/bazel/.bazel --bazelrc=/home/ubuntu/workspace/bazel/.bazelrc
 
-rm bazel-0.1.2-jdk7-installer-linux-x86_64.sh
 
-cd /home/ubuntu/workspace/bazel/.bazel/bin
-chmod a+x bazel
 
 
 
@@ -70,7 +87,7 @@ export PATH=$PATH:$BAZEL_HOME/bin
 
 #Lets try to update bazel
 
-sudo apt-get upgrade bazel
+#sudo apt-get upgrade bazel
 
 
 cd /home/ubuntu/workspace
