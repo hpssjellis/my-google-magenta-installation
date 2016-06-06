@@ -284,7 +284,9 @@ git clone https://github.com/tensorflow/magenta.git
 
 # now test bazel, where is the directory???
 
-#bazel test magenta/...
+cd /home/ubuntu/workspace/magenta/magenta
+
+bazel test
 
 
 # build your script (lots of midi files in a folder)
