@@ -1,0 +1,260 @@
+#!/bin/bash  
+
+#  only need to run this script with the command (do not type the #)
+#  bash setup.sh
+#  best in cloud 9 to just right click this file and select run
+
+
+#commented out batch files aer from another github site at https://github.com/hpssjellis/TensorFlow-Android-Camera-Demo-on-Cloud9
+
+
+
+#bash a02-rocksetta-gcc-java8.sh
+
+#bash a03-rocksetta-bazel.sh
+
+
+
+echo "Now trying Bazel"
+#read -p "Press [Enter] key to start "
+
+
+#https://github.com/bazelbuild/bazel/releases/download/0.1.2/bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+
+
+
+#wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u20-b26/jdk-8u20-linux-x64.tar.gz
+
+
+
+#git clone https://github.com/bazelbuild/bazel.git
+
+
+#cd bazel
+#bash compile.sh
+
+#cd ..
+
+
+
+
+#https://github.com/bazelbuild/bazel/releases/download/0.1.2/bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+
+mkdir /home/ubuntu/workspace/bazel
+
+wget https://github.com/bazelbuild/bazel/releases/download/0.1.2/bazel-0.1.2-jdk7-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+
+cd /home/ubuntu/workspace/bazel
+
+chmod a+x bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+bash bazel-0.1.2-jdk7-installer-linux-x86_64.sh --bin=/home/ubuntu/workspace/bazel/bin --base=/home/ubuntu/workspace/bazel/.bazel --bazelrc=/home/ubuntu/workspace/bazel/.bazelrc
+
+rm bazel-0.1.2-jdk7-installer-linux-x86_64.sh
+
+cd /home/ubuntu/workspace/bazel/.bazel/bin
+chmod a+x bazel
+
+
+
+echo "exporting the Path to my .profile file so other terminals have the path"
+
+printf "\n\nexport BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
+
+
+echo "exporting the path so that the next command works"
+
+
+export BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel
+export PATH=$PATH:$BAZEL_HOME/bin
+
+
+
+
+cd /home/ubuntu/workspace
+
+
+echo "----------------Bazel Done----------------------------------------------"
+echo ". "
+
+
+
+
+
+#bash a04-rocksetta-android-sdk.sh
+
+
+#bash a06-rocksetta-setup-android.sh
+
+
+#bash a07-rocksetta-gradle.sh
+
+
+#bash a08-rocksetta-paths.sh
+
+#bash a09-rocksetta-tensorflow.sh
+
+
+
+echo "Now get TensorFlow"
+
+
+git clone --recurse-submodules https://github.com/tensorflow/tensorflow /home/ubuntu/workspace/tensorflow/tensorflow
+
+
+echo "Now download the image sets"
+
+
+wget https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip -O /tmp/inception5h.zip
+
+unzip /tmp/inception5h.zip -d /home/ubuntu/workspace/tensorflow/tensorflow/examples/android/assets/
+
+
+rm /tmp/inception5h.zip
+
+
+
+echo "exporting the Path to my .profile file so other terminals have the path"
+
+printf "\n\nexport TENSORFLOW_HOME=/home/ubuntu/workspace/tensorflow/tensorflow\nexport PATH=\$PATH:\$TENSORFLOW_HOME/bin"  >> ~/.profile
+
+
+echo "exporting the path so that the next command works"
+
+
+export TENSORFLOW_HOME=/home/ubuntu/workspace/tensorflow/tensorflow
+export PATH=$PATH:$TENSORFLOW_HOME/bin
+
+
+
+
+
+echo "-------------DONE TENSORFLOW-------------------------------------------------"
+echo ". "
+
+
+
+
+
+
+
+
+
+
+
+#bash a01-rocksetta-checks.sh
+
+
+
+
+
+
+
+echo "First checking the Python version"
+python --version
+
+echo "--------------------------------------------------------------"
+echo ". "
+
+
+echo "Now checking where python is installed"
+readlink -f $(which python)
+echo ""
+echo "--------------------------------------------------------------"
+
+
+echo "Now checking if pip is installed"
+
+pip list
+
+echo "--------------------------------------------------------------"
+echo ". "
+
+
+
+echo "echo "Now checking where pip is installed"
+readlink -f $(which pip)
+echo ""
+echo "--------------------------------------------------------------"
+echo ". "
+echo "Now checking if java is installed"
+java -h
+echo ""
+javac
+echo "--------------------------------------------------------------"
+echo ". "
+echo "Now checking where the jdk is installed"
+readlink -f $(which java)
+echo ""
+readlink -f $(which javac)
+echo "--------------------------------------------------------------"
+echo ". "
+echo "Now checking if Android SDK is installed"
+android -h
+echo ""
+echo "--------------------------------------------------------------"
+echo ". "
+echo "Now checking where android sdk is installed"
+readlink -f $(which android)
+echo "--------------------------------------------------------------"
+echo ". "
+echo "Now checking if Bazel is installed"
+bazel -h
+echo ""
+echo "--------------------------------------------------------------"
+echo ". "
+echo "echo "Now checking where bazel is installed"
+readlink -f $(which bazel)
+echo ""
+echo "--------------------------------------------------------------"
+echo ". "
+
+
+
+
+echo "Now checking if Gradle is installed"
+
+gradle -v
+echo ""
+
+echo "--------------------------------------------------------------"
+echo ". "
+
+
+
+
+
+echo "echo "Now checking where Gradle is installed"
+readlink -f $(which gradle)
+echo ""
+echo "--------------------------------------------------------------"
+echo ". "
+echo "echo "Now checking where gcc is installed"
+readlink -f $(which gcc)
+echo ""
+
+echo "--------------------------------------------------------------"
+echo ". "
+
+
+
+echo "next list this directory"
+pwd
+echo ""
+ls -lah  
+
+echo "--------------------------------------------------------------"
+echo "Some other useful commands are cd     cd ..      dir    ls     pwd     "
+echo "."
+
+echo " To check paths for new terminals, I suggested to run:"
+echo "nano ~/.profile"
+
+
+
+
+#echo "Now lets make an App. Checkout a10.rocksetta-create.sh to see the steps"
+
+#bash a10.rocksetta-create.sh
+
+#echo "Look in the wow3/bin folder to see your myNameWow3-debug.apk file"
+#echo "run the index.html file and then Preview preview running App to view the .apk on a webpage to test on your Android 4.4.0 phone"
