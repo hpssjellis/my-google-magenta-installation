@@ -258,6 +258,37 @@ echo "nano ~/.profile"
 
 
 
+
+# Now instalkl magenta
+
+git clone https://github.com/tensorflow/magenta.git
+
+
+
+# now test bazel, where is the directory???
+
+#bazel test magenta/...
+
+
+# build your script (lots of midi files in a folder)
+#bazel build magenta:convert_midi_dir_to_note_sequences
+
+
+
+
+#The run it
+
+#./bazel-bin/magenta/convert_midi_dir_to_note_sequences \
+#--midi_dir=/path/to/midi/dir \
+#--output_file=/path/to/tfrecord/file \
+#--recursive
+
+
+
+
+
+
+
 #echo "Now lets make an App. Checkout a10.rocksetta-create.sh to see the steps"
 
 #bash a10.rocksetta-create.sh
