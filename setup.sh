@@ -68,6 +68,9 @@ export BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel
 export PATH=$PATH:$BAZEL_HOME/bin
 
 
+#Lets try to update bazel
+
+sudo apt-get upgrade bazel
 
 
 cd /home/ubuntu/workspace
@@ -100,16 +103,19 @@ echo "Now get TensorFlow"
 
 git clone --recurse-submodules https://github.com/tensorflow/tensorflow /home/ubuntu/workspace/tensorflow/tensorflow
 
-
-echo "Now download the image sets"
-
-
-wget https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip -O /tmp/inception5h.zip
-
-unzip /tmp/inception5h.zip -d /home/ubuntu/workspace/tensorflow/tensorflow/examples/android/assets/
+#sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
 
 
-rm /tmp/inception5h.zip
+
+#echo "Now download the image sets"
+
+
+#wget https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip -O /tmp/inception5h.zip
+
+#unzip /tmp/inception5h.zip -d /home/ubuntu/workspace/tensorflow/tensorflow/examples/android/assets/
+
+
+#rm /tmp/inception5h.zip
 
 
 
