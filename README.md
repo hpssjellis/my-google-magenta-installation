@@ -9,6 +9,13 @@ June 6, 2016. Just found the github site for Google's Magenta Music Tensorflow s
 https://github.com/tensorflow/magenta
 
 
+run the bash file setup.sh to install bazel, tensorflow and magenta
+
+
+
+
+
+
 Use at your own risk
 
 By Jeremy Ellis
