@@ -284,7 +284,7 @@ git clone https://github.com/tensorflow/magenta.git
 
 # now test bazel, where is the directory???
 
-cd /home/ubuntu/workspace/magenta/magenta
+cd /home/ubuntu/workspace/magenta
 
 #bazel test
 
