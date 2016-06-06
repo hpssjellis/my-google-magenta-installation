@@ -317,3 +317,17 @@ bazel build //magenta:midi_io_test
 
 #echo "Look in the wow3/bin folder to see your myNameWow3-debug.apk file"
 #echo "run the index.html file and then Preview preview running App to view the .apk on a webpage to test on your Android 4.4.0 phone"
+
+
+
+
+
+# some forum stuff at
+#https://groups.google.com/a/tensorflow.org/forum/#!searchin/magenta-discuss/magenta/magenta-discuss/R0YiSbM3v5c/dW2qtKM3BQAJ
+#https://groups.google.com/a/tensorflow.org/forum/#!searchin/magenta-discuss/magenta/magenta-discuss/HC_squh5TbA/Gx7MCp4cBAAJ
+#https://groups.google.com/a/tensorflow.org/forum/#!searchin/magenta-discuss/magenta/magenta-discuss/dtQUq6IVaXk/7Cg32SdPBAAJ
+
+
+
+
+
