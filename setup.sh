@@ -135,6 +135,11 @@ echo ". "
 
 #bash a09-rocksetta-tensorflow.sh
 
+
+
+sudo apt-get -y install python-pip python-dev python-virtualenv libblas-dev liblapack-dev libatlas-base-dev gfortran
+
+
 echo "make the tensorflow environment"
 
 virtualenv --system-site-packages ~/virtual-tf
