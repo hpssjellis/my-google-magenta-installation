@@ -135,7 +135,24 @@ echo ". "
 
 #bash a09-rocksetta-tensorflow.sh
 
+echo "make the tensorflow environment"
 
+virtualenv --system-site-packages ~/virtual-tf
+
+echo "--------------------------------------------------------------"
+echo ". "
+
+
+
+
+
+
+
+echo "Activate the environemtn use deactivate to get your cursor back"
+source ~/virtual-tf/bin/activate 
+
+printf "\n\nsource ~/virtual-tf/bin/activate "  >> ~/.profile
+printf "\necho 'enter   deactivate    to get out of the virtual enviroment'"  >> ~/.profile
 
 echo "Now get TensorFlow"
 
