@@ -158,12 +158,12 @@ sudo pip install --upgrade http://ci.tensorflow.org/view/Nightly/job/nightly-mat
 echo "--------------------------------------------------------------"
 echo ". "
 
-echo "Unfortunately on cloud 9 Pip hides the TensorFlow folder so lets clone it for our use"
-echo "Kind of wasteful but it isn't on our computer anyway"
+#echo "Unfortunately on cloud 9 Pip hides the TensorFlow folder so lets clone it for our use"
+#echo "Kind of wasteful but it isn't on our computer anyway"
 
 #deactivate
 
-git clone --recurse-submodules https://github.com/tensorflow/tensorflow
+#git clone --recurse-submodules https://github.com/tensorflow/tensorflow
 
 
 echo "--------------------------------------------------------------"
@@ -203,16 +203,16 @@ echo ". "
 
 #deactivate
 
-git clone --recurse-submodules https://github.com/tensorflow/tensorflow
+#git clone --recurse-submodules https://github.com/tensorflow/tensorflow
 
-echo "Make a quick link to udacity example files" 
+#echo "Make a quick link to udacity example files" 
 
-ln -s /home/ubuntu/workspace/tensorflow/tensorflow/examples/udacity /home/ubuntu/workspace/udacity-Link
+#ln -s /home/ubuntu/workspace/tensorflow/tensorflow/examples/udacity /home/ubuntu/workspace/udacity-Link
 
 
-echo "Make a quick link to skflow example files" 
+#echo "Make a quick link to skflow example files" 
 
-ln -s /home/ubuntu/workspace/tensorflow/tensorflow/examples/skflow /home/ubuntu/workspace/skflow-examples/skflow-link
+#ln -s /home/ubuntu/workspace/tensorflow/tensorflow/examples/skflow /home/ubuntu/workspace/skflow-examples/skflow-link
 
 echo "Make a link to the actual installed pip tensorflow not just the github clone"
 
@@ -235,10 +235,10 @@ ln -s /home/ubuntu//virtual-tf/lib/python2.7/site-packages/tensorflow /home/ubun
 
 
 
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer pkg-config zip g++ zlib1g-dev unzip
+#sudo apt-get install software-properties-common
+#sudo add-apt-repository ppa:webupd8team/java
+#sudo apt-get update
+#sudo apt-get install oracle-java8-installer pkg-config zip g++ zlib1g-dev unzip
 
 #mkdir /home/ubuntu/workspace/bazel
 
@@ -249,8 +249,45 @@ sudo apt-get install oracle-java8-installer pkg-config zip g++ zlib1g-dev unzip
 #rm bazel-0.2.3-installer-linux-x86_64.sh
 
 
-sudo apt-get install bazel
-sudo apt-get upgrade bazel
+#sudo apt-get install bazel
+#sudo apt-get upgrade bazel
+
+
+
+
+
+
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer pkg-config zip g++ zlib1g-dev unzip
+
+mkdir /home/ubuntu/workspace/bazel
+
+wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.2.3-installer-linux-x86_64.sh
+chmod +x bazel-0.2.3-installer-linux-x86_64.sh
+./bazel-0.2.3-installer-linux-x86_64.sh --user
+export PATH="$PATH:/home/ubuntu/.bazel/bin"
+rm bazel-0.2.3-installer-linux-x86_64.sh
+
+
+
+
+ln -s /home/ubuntu/.bazel/bin /home/ubuntu/workspace/hidden-bazel
+
+
+
+bazel -h
+
+
+
+printf "\n\nexport BAZEL_HOME=/home/ubuntu/.bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
+
+
+
+
+
 
 
 
