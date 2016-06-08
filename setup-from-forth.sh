@@ -89,20 +89,20 @@ echo "Installing a few extra packages"
 #note still having issues with numpy not installing from pip and building from scratch
 #tried several methods, perhaps try
 #should  Install dask, numpy, and pandas
-pip install dask[dataframe]
+#pip install dask[dataframe]
 
 
-pip install Wand
+#pip install Wand
 
 #pip install numpy
 
-pip install scipy
+#pip install scipy
 
-pip install matplotlib
+#pip install matplotlib
 
-pip install pymatbridge
+#pip install pymatbridge
 
-pip install scikit-learn
+#pip install scikit-learn
 
 #pip install pandas
 
@@ -231,7 +231,59 @@ ln -s /home/ubuntu//virtual-tf/lib/python2.7/site-packages/tensorflow /home/ubun
 
 
 
+# now bazel
 
+
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer pkg-config zip g++ zlib1g-dev unzip
+
+#mkdir /home/ubuntu/workspace/bazel
+
+#wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.2.3-installer-linux-x86_64.sh
+#chmod +x bazel-0.2.3-installer-linux-x86_64.sh
+#./bazel-0.2.3-installer-linux-x86_64.sh --user
+#export PATH="$PATH:/home/ubuntu/workspace/bazel/.bazel/bin"
+#rm bazel-0.2.3-installer-linux-x86_64.sh
+
+
+sudo apt-get install bazel
+sudo apt-get upgrade bazel
+
+
+
+
+
+# Now install magenta
+
+git clone https://github.com/tensorflow/magenta.git
+
+
+
+# now test bazel, where is the directory???
+
+cd /home/ubuntu/workspace/magenta
+
+#bazel test
+
+
+#bazel build //magenta:midi_io_test
+#bazel build //magenta:midi_io
+
+# build your script (lots of midi files in a folder)
+#bazel build magenta:convert_midi_dir_to_note_sequences
+
+
+
+
+#The run it
+
+#./bazel-bin/magenta/convert_midi_dir_to_note_sequences \
+#--midi_dir=/path/to/midi/dir \
+#--output_file=/path/to/tfrecord/file \
+#--recursive
 
 
 
