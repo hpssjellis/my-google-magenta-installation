@@ -66,14 +66,17 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-ins
 
 #wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.2.3-installer-linux-x86_64.sh
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
-bash bazel-0.2.3-installer-linux-x86_64.sh --user
-export PATH="$PATH:/home/ubuntu/.bazel/bin"
+
+bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=/home/ubuntu/workspace/bazel/bin --base=/home/ubuntu/workspace/bazel
+
+#bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
+export PATH="$PATH:home/ubuntu/workspace/bazel/bin"
 rm bazel-0.2.3-installer-linux-x86_64.sh
 
+#./bazel-0.1.5-jdk7-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin --base=${IDEDIR}/bazelbase
 
 
-
-ln -s /home/ubuntu/.bazel/bin /home/ubuntu/workspace/hidden-bazel
+#ln -s /home/ubuntu/.bazel/bin /home/ubuntu/workspace/hidden-bazel
 
 
 
@@ -81,7 +84,7 @@ bazel -h
 
 
 
-printf "\n\nexport BAZEL_HOME=/home/ubuntu/.bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
+printf "\n\nexport BAZEL_HOME=home/ubuntu/workspace/bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
 
 
 
