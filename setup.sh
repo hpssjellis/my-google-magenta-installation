@@ -67,7 +67,7 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-ins
 #wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.2.3-installer-linux-x86_64.sh
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
-bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=/home/ubuntu/workspace/bazel/bin --base=/home/ubuntu/workspace/bazel
+bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=./bin --base=.
 
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
 export PATH="$PATH:home/ubuntu/workspace/bazel/bin"
