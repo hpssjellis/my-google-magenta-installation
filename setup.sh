@@ -95,9 +95,9 @@ printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
 
 
 
-echo "exporting the Path to my .profile file so other terminals have the path"
+#echo "exporting the Path to my .profile file so other terminals have the path"
 
-printf "\n\nexport BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
+#printf "\n\nexport BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
 
 
 echo "exporting the path so that the next command works"
