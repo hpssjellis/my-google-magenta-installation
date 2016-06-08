@@ -54,6 +54,7 @@ echo "Now trying Bazel"
 #cd /home/ubuntu/workspace/bazel/.bazel/bin
 #chmod a+x bazel
 
+
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
@@ -64,8 +65,24 @@ mkdir /home/ubuntu/workspace/bazel
 wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.2.3-installer-linux-x86_64.sh
 chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 ./bazel-0.2.3-installer-linux-x86_64.sh --user
-export PATH="$PATH:/home/ubuntu/bin"
+export PATH="$PATH:/home/ubuntu/.bazel/bin"
 rm bazel-0.2.3-installer-linux-x86_64.sh
+
+
+
+
+ln -s /home/ubuntu/.bazel/bin /home/ubuntu/workspace/hidden-bazel
+
+
+
+bazel -h
+
+
+
+printf "\n\nexport BAZEL_HOME=/home/ubuntu/.bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
+
+
+
 
 
 
@@ -81,8 +98,8 @@ printf "\n\nexport BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel\nexport PATH=\
 echo "exporting the path so that the next command works"
 
 
-export BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel
-export PATH=$PATH:$BAZEL_HOME/bin
+#export BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel
+#export PATH=$PATH:$BAZEL_HOME/bin
 
 
 #Lets try to update bazel
@@ -289,7 +306,7 @@ cd /home/ubuntu/workspace/magenta
 #bazel test
 
 
-bazel build //magenta:midi_io_test
+#bazel build //magenta:midi_io_test
 #bazel build //magenta:midi_io
 
 # build your script (lots of midi files in a folder)
