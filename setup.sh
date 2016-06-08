@@ -86,7 +86,7 @@ bazel -h
 
 printf "\n\nexport BAZEL_HOME=home/ubuntu/workspace/bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
 
-
+printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
 
 
 
