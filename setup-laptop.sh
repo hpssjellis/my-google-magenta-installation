@@ -87,7 +87,7 @@ bazel -h
 
 
 
-printf "\n\nexport BAZEL_HOME=~/mymagenta/bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.bachrc
+printf "\n\nexport BAZEL_HOME=~/mymagenta/bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.bashrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
 
