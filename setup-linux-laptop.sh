@@ -6,6 +6,10 @@
 
 
 #commented out batch files aer from another github site at https://github.com/hpssjellis/TensorFlow-Android-Camera-Demo-on-Cloud9
+echo "Installs Magenta to a folder in your home directory called mymagenta"
+
+
+
 
 mkdir ~/mymagenta
 
