@@ -70,7 +70,7 @@ cd ~/mymagenta/bazel
 wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
-bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=~/mymagenta/bazel/bin --base=~/mymagenta/bazel
+bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=bin --base=.
 
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
 export PATH="$PATH:~/mymagenta/bazel/bin"
@@ -164,11 +164,13 @@ printf "\necho 'enter   deactivate    to get out of the virtual enviroment'"  >>
 
 echo "Now get TensorFlow"
 
-sudo pip install --upgrade http://ci.tensorflow.org/view/Nightly/job/nightly-matrix-cpu/TF_BUILD_CONTAINER_TYPE=CPU,TF_BUILD_IS_OPT=OPT,TF_BUILD_IS_PIP=PIP,TF_BUILD_PYTHON_VERSION=PYTHON2,label=cpu-slave/lastSuccessfulBuild/artifact/pip_test/whl/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
+cd ~/mymagenta
+
+#sudo pip install --upgrade http://ci.tensorflow.org/view/Nightly/job/nightly-matrix-cpu/TF_BUILD_CONTAINER_TYPE=CPU,TF_BUILD_IS_OPT=OPT,TF_BUILD_IS_PIP=PIP,TF_BUILD_PYTHON_VERSION=PYTHON2,label=cpu-slave/lastSuccessfulBuild/artifact/pip_test/whl/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
 
 #git clone --recurse-submodules https://github.com/tensorflow/tensorflow /home/ubuntu/workspace/tensorflow/tensorflow
 
-#sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
+sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
 
 
 
