@@ -7,7 +7,9 @@
 
 #commented out batch files aer from another github site at https://github.com/hpssjellis/TensorFlow-Android-Camera-Demo-on-Cloud9
 
+mkdir ~/mymagenta
 
+cd ~/mymagenta
 
 #bash a02-rocksetta-gcc-java8.sh
 
@@ -60,18 +62,19 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get -y install oracle-java8-installer pkg-config zip g++ zlib1g-dev unzip
 
-mkdir /home/ubuntu/workspace/bazel
+mkdir ~/mymagenta/bazel
+cd ~/mymagenta/bazel
 
 #wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh 
 
-wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O /home/ubuntu/workspace/bazel/bazel-0.2.3-installer-linux-x86_64.sh
+wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
-bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=./bin --base=.
+bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=~/mymagenta/bazel/bin --base=~/mymagenta/bazel
 
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
-export PATH="$PATH:home/ubuntu/workspace/bazel/bin"
-rm bazel-0.2.3-installer-linux-x86_64.sh
+export PATH="$PATH:~/mymagenta/bazel/bin"
+#rm bazel-0.2.3-installer-linux-x86_64.sh
 
 #./bazel-0.1.5-jdk7-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin --base=${IDEDIR}/bazelbase
 
@@ -84,7 +87,7 @@ bazel -h
 
 
 
-printf "\n\nexport BAZEL_HOME=/home/ubuntu/workspace/bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
+printf "\n\nexport BAZEL_HOME=~/mymagenta/bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.bachrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
 
@@ -112,7 +115,7 @@ echo "exporting the path so that the next command works"
 #sudo apt-get upgrade bazel
 
 
-cd /home/ubuntu/workspace
+cd ~/mymagenta
 
 
 echo "----------------Bazel Done----------------------------------------------"
@@ -156,8 +159,8 @@ echo ". "
 echo "Activate the environemtn use deactivate to get your cursor back"
 source ~/virtual-tf/bin/activate 
 
-printf "\n\nsource ~/virtual-tf/bin/activate "  >> ~/.profile
-printf "\necho 'enter   deactivate    to get out of the virtual enviroment'"  >> ~/.profile
+printf "\n\nsource ~/virtual-tf/bin/activate "  >> ~/.bashrc
+printf "\necho 'enter   deactivate    to get out of the virtual enviroment'"  >> ~/.bashrc
 
 echo "Now get TensorFlow"
 
@@ -183,13 +186,13 @@ sudo pip install --upgrade http://ci.tensorflow.org/view/Nightly/job/nightly-mat
 
 echo "exporting the Path to my .profile file so other terminals have the path"
 
-printf "\n\nexport TENSORFLOW_HOME=/home/ubuntu/workspace/tensorflow/tensorflow\nexport PATH=\$PATH:\$TENSORFLOW_HOME/bin"  >> ~/.profile
+printf "\n\nexport TENSORFLOW_HOME=~/mymagenta/tensorflow/tensorflow\nexport PATH=\$PATH:\$TENSORFLOW_HOME/bin"  >> ~/.profile
 
 
 echo "exporting the path so that the next command works"
 
 
-export TENSORFLOW_HOME=/home/ubuntu/workspace/tensorflow/tensorflow
+export TENSORFLOW_HOME=~/mymagenta/tensorflow/tensorflow
 export PATH=$PATH:$TENSORFLOW_HOME/bin
 
 
@@ -281,7 +284,7 @@ echo ". "
 
 echo "Now checking if Gradle is installed"
 
-gradle -v
+#gradle -v
 echo ""
 
 echo "--------------------------------------------------------------"
@@ -291,8 +294,8 @@ echo ". "
 
 
 
-echo "echo "Now checking where Gradle is installed"
-readlink -f $(which gradle)
+#echo "echo "Now checking where Gradle is installed"
+#readlink -f $(which gradle)
 echo ""
 echo "--------------------------------------------------------------"
 echo ". "
@@ -319,9 +322,9 @@ echo "nano ~/.profile"
 
 
 
+cd ~/mymagenta
 
-
-# Now instalkl magenta
+# Now installl magenta
 
 git clone https://github.com/tensorflow/magenta.git
 
@@ -329,9 +332,9 @@ git clone https://github.com/tensorflow/magenta.git
 
 # now test bazel, where is the directory???
 
-cd /home/ubuntu/workspace/magenta
+cd ~/mymagenta/magenta
 
-#bazel test
+#bazel test ~/mymagenta/magenta
 
 
 #bazel build //magenta:midi_io_test
