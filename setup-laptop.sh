@@ -299,7 +299,8 @@ echo ". "
 echo ""
 echo "--------------------------------------------------------------"
 echo ". "
-echo "echo "Now checking where gcc is installed"
+echo ""
+echo "Now checking where gcc is installed"
 readlink -f $(which gcc)
 echo ""
 
