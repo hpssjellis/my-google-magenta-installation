@@ -1,4 +1,4 @@
-# my-magenta
+# my-google-magenta-installation
 Getting Googles Magenta working on Cloud9 for Music Creation
 
 
@@ -10,7 +10,7 @@ Having some luck with setup-linux-laptop.sh on a linux ubuntu laptop installatio
 
 Tried installing on a windows computer using batch files but that is not going to succeed since Bazel does not presently install very nicely on windows.
 
-You might want to see my Tensorflow installation on cloud 9 at https://github.com/hpssjellis/forth-tensorflow 
+You might want to try my Tensorflow installation on cloud 9 at https://github.com/hpssjellis/forth-tensorflow the video shows how to do it. I would really like to make a docker file of tensorflow, but getting tired of working for free.
 
 
 
