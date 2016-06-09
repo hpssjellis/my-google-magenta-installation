@@ -209,6 +209,7 @@ echo ". "
 
 
 
+ln -s ~/virtual-tf/lib/python2.7/site-packages/tensorflow ~/mymagenta/pip-tensorflow-link
 
 
 
