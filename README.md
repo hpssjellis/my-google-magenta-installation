@@ -20,7 +20,7 @@ June 6, 2016. Just found the github site for Google's Magenta Music Tensorflow s
 https://github.com/tensorflow/magenta
 
 
-run the bash file setup.sh to install bazel, tensorflow and magenta
+Trying to make bash files to install bazel, tensorflow and magenta
 
 
 
