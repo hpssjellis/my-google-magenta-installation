@@ -342,14 +342,20 @@ git clone https://github.com/tensorflow/magenta.git
 
 cd ~/mymagenta/magenta
 
-#bazel test ~/mymagenta/magenta
+bazel test //magenta:all
+
+
+echo "If it all worked try these scripts"
+
+echo "build //magenta:midi_io_test"
 
 
 #bazel build //magenta:midi_io_test
-#bazel build //magenta:midi_io
+echo "bazel build //magenta:midi_io"
+echo "bazel build //magenta:note_sequence_io"
 
 # build your script (lots of midi files in a folder)
-#bazel build magenta:convert_midi_dir_to_note_sequences
+echo "bazel build //magenta:convert_midi_dir_to_note_sequences"
 
 
 
