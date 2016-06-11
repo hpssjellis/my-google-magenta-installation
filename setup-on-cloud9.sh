@@ -327,6 +327,10 @@ git clone https://github.com/tensorflow/magenta.git
 
 
 
+
+echo "Since Magenta uses the /tmp directory better make a link to it"
+ln -s /tmp /home/ubuntu/workspace/hidden-tmp
+
 # now test bazel, where is the directory???
 
 cd /home/ubuntu/workspace/magenta
