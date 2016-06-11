@@ -321,7 +321,7 @@ echo "nano ~/.profile"
 
 
 
-# Now instalkl magenta
+# Now install magenta
 
 git clone https://github.com/tensorflow/magenta.git
 
@@ -343,7 +343,7 @@ cd /home/ubuntu/workspace/magenta
 
 
 
-#The run it
+#Then run it
 
 #./bazel-bin/magenta/convert_midi_dir_to_note_sequences \
 #--midi_dir=/path/to/midi/dir \
