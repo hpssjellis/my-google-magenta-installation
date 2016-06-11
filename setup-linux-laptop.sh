@@ -217,6 +217,10 @@ ln -s ~/virtual-tf/lib/python2.7/site-packages/tensorflow ~/mymagenta/pip-tensor
 
 
 
+echo "Grab my github site to load a few batch files, they may will need to be copied into the magenta workspace"
+cd ~/mymagenta
+
+git clone https://github.com/hpssjellis/my-google-magenta-installation.git
 
 
 #bash a01-rocksetta-checks.sh
