@@ -75,6 +75,7 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-ins
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
 bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=bin --base=.
+sudo bash bazel-0.2.3-installer-linux-x86_64.sh --user
 
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
 export PATH="$PATH:~/mymagenta/bazel/bin"
