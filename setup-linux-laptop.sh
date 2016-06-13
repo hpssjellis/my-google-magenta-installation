@@ -92,7 +92,7 @@ bazel -h
 
 
 
-printf "\n\nexport BAZEL_HOME=~/\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.bashrc
+printf "\n\nexport PATH=\$PATH:~/bin"  >> ~/.bashrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
 
@@ -108,7 +108,7 @@ printf "\n\nexport BAZEL_HOME=~/\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.ba
 #printf "\n\nexport BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.profile
 
 
-echo "exporting the path so that the next command works"
+#echo "exporting the path so that the next command works"
 
 
 #export BAZEL_HOME=/home/ubuntu/workspace/bazel/.bazel
