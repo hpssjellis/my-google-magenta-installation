@@ -74,12 +74,12 @@ cd ~/mymagenta/bazel
 wget https://github.com/bazelbuild/bazel/releases/download/0.2.3/bazel-0.2.3-installer-linux-x86_64.sh -O ~/mymagenta/bazel/bazel-0.2.3-installer-linux-x86_64.sh
 #chmod +x bazel-0.2.3-installer-linux-x86_64.sh
 
-bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=bin --base=.
+#bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=bin --base=.
 sudo bash bazel-0.2.3-installer-linux-x86_64.sh --user
 
 #bash bazel-0.2.3-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin
-export PATH="$PATH:~/mymagenta/bazel/bin"
-#rm bazel-0.2.3-installer-linux-x86_64.sh
+export PATH="$PATH:~/bin"
+rm bazel-0.2.3-installer-linux-x86_64.sh
 
 #./bazel-0.1.5-jdk7-installer-linux-x86_64.sh --user --bin=${IDEDIR}/bin --base=${IDEDIR}/bazelbase
 
@@ -92,7 +92,7 @@ bazel -h
 
 
 
-printf "\n\nexport BAZEL_HOME=~/mymagenta/bazel\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.bashrc
+printf "\n\nexport BAZEL_HOME=~/\nexport PATH=\$PATH:\$BAZEL_HOME/bin"  >> ~/.bashrc
 
 #printf "\n\nsource ./bin/bazel-complete.bash"  >> ~/.profile
 
