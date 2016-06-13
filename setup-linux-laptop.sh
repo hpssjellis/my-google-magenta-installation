@@ -218,9 +218,9 @@ echo ". "
 
 
 
+#broken link to tensorflow???
 
-
-ln -s ~/virtual-tf/lib/python2.7/site-packages/tensorflow ~/mymagenta/pip-tensorflow-link
+#ln -s ~/virtual-tf/lib/python2.7/site-packages/tensorflow ~/mymagenta/pip-tensorflow-link
 
 
 
@@ -403,4 +403,6 @@ echo "bazel build //magenta:convert_midi_dir_to_note_sequences"
 
 
 
+
+cd ~/mymagenta/magenta
 
