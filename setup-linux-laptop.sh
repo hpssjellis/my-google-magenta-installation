@@ -230,6 +230,12 @@ cd ~/mymagenta
 git clone https://github.com/hpssjellis/my-google-magenta-installation.git
 
 
+#copy bash files to the magenta workspace folder
+cd ~/mymagenta/my-google-magenta-installation
+
+cp a* ~/mymagenta/magenta
+
+
 #bash a01-rocksetta-checks.sh
 
 
