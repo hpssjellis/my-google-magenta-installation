@@ -3,6 +3,15 @@ Getting Googles Magenta working on Cloud9 for Music Creation
 
 
 
+
+June 13, 2016
+
+This repository is for setting up Google Magenta and Tensorflow on Cloud9 http://c9.io . I am having more success working on a Linux ubuntu laptop so I have moved most of this repo to https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world
+
+
+
+
+
 June 11, 2016
 
 The **setup-linux-laptop.sh** file is installing but when running the training I am getting a legacy_linear module not found. Getting very close. Remember to get the bash files into the main magenta workspace ~/mymagenta/magenta
