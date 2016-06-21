@@ -4,6 +4,31 @@ Getting Googles Magenta working on Cloud9 for Music Creation
 
 
 
+
+
+
+June20 2016
+
+Don'ty use this one. I only have this repository as a backup for the main repos
+
+
+For linux/ubuntu use
+
+https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world
+
+
+
+For Cloud9 use
+
+https://github.com/hpssjellis/my-tensorflow-magenta-online
+
+
+
+For Mac use
+
+(not made yet,since I don't own a mac computer)
+
+
 June 13, 2016
 
 This repository is for setting up Google Magenta and Tensorflow on Cloud9 http://c9.io . I am having more success working on a Linux ubuntu laptop so I have moved most of this repo to https://github.com/hpssjellis/google-magenta-midi-music-on-linux-hello-world
